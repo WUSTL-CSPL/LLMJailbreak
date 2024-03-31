@@ -13,7 +13,11 @@ if model != "gpt35" and model != "gpt4":
     assert False
 
 #################### Set paths
-root_path = <Your Path>
+
+print("Please enter your OpenAI API key")
+openai_key = input()
+print("Please enter your root path")
+root_path = input()
 
 prompt_folder = root_path + "/Prompts"
 systemMsg_path = prompt_folder + "/JailbreakPrompts.csv"
@@ -34,7 +38,7 @@ if not os.path.exists(response_path):
 
 #################### Set model configs
 max_tokens = 1600
-os.environ["OPENAI_API_KEY"] = <Your API Key>
+os.environ["OPENAI_API_KEY"] = openai_key
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 

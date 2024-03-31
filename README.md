@@ -13,13 +13,13 @@ The programs can run on a machine with a moderate CPU and at least 16GB of avail
 Conda or Miniconda is recommended for setting up the environment. It can be installed via the [official link](https://docs.conda.io/en/latest/miniconda.html) and the process can differ based on the user's OS. The commands for setting up the environment are:
 ```sh
 $ cd <the_path_to_the_folder>
-$ conda create -n jailbreak python=3.8
-$ pip3 install openpyxl nltk pandas scipy xlsxwriter
-$ pip3 install openai google-generativeai
+$ conda env create -f jailbreak.yml
 $ conda activate jailbreak
 ```
 
 Please find the supplementary files on the [Google Drive](https://drive.google.com/file/d/1tDYB_Z-L2hxSwUZZQM0oRf730seTbO_3/view?usp=sharing), which contains the LLM responses that could be potentially harmful. Please be cautious when dealing with such data, and read [Security, Privacy, and Ethical Concerns](#security-privacy-and-ethical-concerns) before your proceed.
+
+Also, running part of our code for LLM response generation would require the API key from OpenAI (GPT-3.5 and GPT-4) and Google (PaLM-2). To apply for API keys, please direct to [OpenAI's](https://platform.openai.com/signup) and [Google's](https://ai.google.dev/tutorials/setup) official website. 
 
 # Security, Privacy, and Ethical Concerns
 

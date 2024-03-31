@@ -7,9 +7,15 @@ import nltk
 import pandas as pd
 from nltk.tokenize import word_tokenize
 
+# Set the API keys from prompted user inputs
+print("Please enter your OpenAI API key")
+openai_key = input()
+print("Please enter your Google API key")
+google_key = input()
+
 #################### Set ChatGPT model configs
 max_tokens = 1600
-os.environ["OPENAI_API_KEY"] = <Your API Key>
+os.environ["OPENAI_API_KEY"] = openai_key
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 model_API_gpt35 = "gpt-3.5-turbo-0613"
@@ -63,7 +69,7 @@ except:
 
 #################### Set PaLM2 model configs
 max_tokens = 2048
-palm.configure(api_key=<Your API Key>)
+palm.configure(api_key=google_key)
 models = [m for m in palm.list_models() if "generateText" in m.supported_generation_methods]
 model = models[0].name
 

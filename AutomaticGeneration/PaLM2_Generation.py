@@ -8,14 +8,16 @@ import sys
 import pandas as pd
 
 #################### Set model
+print("Please enter your Google API key")
+google_key = input()
+print("Please enter your root path")
+root_path = input()
 
-palm.configure(api_key=<Your API Key>)
+palm.configure(api_key=google_key)
 models = [m for m in palm.list_models() if "generateText" in m.supported_generation_methods]
 model = models[0].name
 
 #################### Set paths
-root_path = <Your Path>
-
 prompt_folder = root_path + "/Prompts"
 systemMsg_path = prompt_folder + "/JailbreakPrompts.csv"
 userMsg_path = prompt_folder + "/MaliciousQueries.csv"
