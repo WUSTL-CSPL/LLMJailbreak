@@ -6,7 +6,7 @@ In this study, we collected and empirically assessed jailbreak prompts against l
 
 # Hardware and Software Dependencies
 
-The programs can run on a machine with a moderate CPU and at least 16GB of available RAM. No other specialized hardware is required for execution. The Python environment was set up using Miniconda 4.12.0 on Ubuntu 22.0.4. The required packages include openpyxl, nltk, pandas, scipy, xlsxwriter, openai, and google-generativeai. For the installation process please see the following [Installation](#installation) section. 
+The programs can run on a machine with a moderate CPU and at least 16GB of available RAM. No other specialized hardware is required for execution. The Python environment was set up using Miniconda 4.12.0 on Ubuntu 22.0.4. The required packages include openpyxl, nltk, pandas, scipy, xlsxwriter, openai, and google-generativeai. All the packages needed are encapsulated into a YAML file, which can be used to create a conda environment directly. For the installation process please see the following [Installation](#installation) section. 
 
 # Installation
 
@@ -49,7 +49,7 @@ $ python3 ChatGPT_Generation.py gpt35
 $ python3 ChatGPT_Generation.py gpt4 
 $ python3 PaLM2_Generation.py
 ```
-Please note that the code needs to be slightly modified for use. The first is the root path where the artifact folder is placed (*<Your Path>* in the code), and the second is the API keys (*<Your API Key>* in the code). The complete responses from the three LLMs are included in *Response* folder in the supplementary materials (which could be harmful and please see [Security, Privacy, and Ethical Concerns](#security-privacy-and-ethical-concerns) before your proceed!). 
+Please note that the user is designed to be prompted to enter two things. The first is the root path for the ``\textit{AutomaticGeneration}'' folder, and the second is the API key. Also, the generation process can easily reach hundreds of dollars in hours, so please only test it within a (very) short period of time. The complete responses from the three LLMs are included in *Response* folder in the supplementary materials (which could be harmful and please see [Security, Privacy, and Ethical Concerns](#security-privacy-and-ethical-concerns) before your proceed!). 
 
 3. The human annotation on the LLM responses are included in *Labels_GPT35.xlsx*, *Labels_GPT4.xlsx*, and *Labels_PaLM2.xlsx* respectively. Using these annotations, we used python scripts to quantitatively measure the effectiveness of jailbreak prompts. First, we can run *JSR_EMH_Category.py* to obtain the jailbreak efficacy acrosss three models in terms of prompt and malicious query categories:
 ```sh   
