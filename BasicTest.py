@@ -2,7 +2,9 @@ import openai
 import time
 import sys
 import os
+import traceback
 import google.generativeai as palm
+from google.api_core import exceptions
 import nltk
 import pandas as pd
 from nltk.tokenize import word_tokenize
@@ -82,6 +84,9 @@ try:
     print(response)
     print("Basic test passed!")
 
+except exceptions as e:
+    print("An unexpected error occurred:", str(e))
+    print("Basic test not passed. Error occurred when testing PaLM2 model.")
+    
 except Exception as e:
-    print("An error occured but not empty response:", e)
-    print("Basic test not passed. Error occurred when testing PaLM-2 model.")
+    print("An unexpected error occurred:", str(e))

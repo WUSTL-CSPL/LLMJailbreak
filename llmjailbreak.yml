@@ -1,4 +1,4 @@
-name: jailbreak
+name: llmjailbreak
 channels:
   - anaconda
   - defaults
@@ -41,10 +41,9 @@ dependencies:
     - regex==2023.12.25
     - six==1.16.0
     - xlsxwriter==3.2.0
-    - openai==0.28.0
     - google-ai-generativelanguage==0.1.0
     - google-api-core==2.11.1
     - google-auth==2.22.0
     - google-generativeai==0.1.0rc1
     - googleapis-common-protos==1.59.1
-prefix: /home/zhiyuanyu/miniconda3/envs/jailbreak
+prefix: /home/zhiyuanyu/miniconda3/envs/llmjailbreak
