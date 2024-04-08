@@ -67,12 +67,13 @@ The expected results are six Excel forms documenting mean and standard deviation
 To investigate the correlations between the prompt lengths and its jailbreak efficacy, please go to the *PromptLengthCorrelation* folder. Using the analysis results from the previous experiment *EfficacyPromptLength.xlsx*, we can run the program with commands:
 ```sh 
 $ cd PromptLengthCorrelation
-$ python3 JSR_EMH_Model.py  
+$ python3 PromptLengthCorrelation.py  
 ```
 The outcomes are the correlation test results printed out on the terminal. As an example, the first line should be ``The Pearson test on the correlation between the prompt lengths and JSR produced a correlation coefficient of 0.207445408829702, with a p-value of 9.565429118142019e-06''. 
 
-Last, to measure jailbreak eficacy per each jailbreak prompt and identify the ones that are universally effective across the three models, please run:
+Last, to measure jailbreak eficacy per each jailbreak prompt and identify the ones that are universally effective across the three models, please switch back to the main directory and execute the script with:
 ```sh
+$ cd ..
 $ python3 JSR_EMH_per_Prompt.py  
 ```
 The expected outputs for the last experiment are two-fold. The first part consists of two Excel forms named *EMH_Prompts.xlsx* and *JSR_Prompts.xlsx*. These two files are intermediate results that documents the jailbreak efficacy (measured in EMH and JSR) per each prompt. These two files are also provided in the *EMH_JSR_Prompts* folder. Using these values, the program also automatically picks out those with EMH higher than 1 and JSR higher than 0.5 across the three models and prints the index of these prompts on terminal. The expected printed indexes are 8, 10, 103, and 138. Referred back to the *JailbreakPrompts.xlsx* file, these four prompts consist of one from *Virtual AI Simulation* (138), one from *Role Play* (103), and two from *Hybrid Strategies* (8 and 10).
