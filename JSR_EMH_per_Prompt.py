@@ -138,6 +138,6 @@ filtered_jsr_df = jsr_df[(jsr_df['mean_jsr_3.5'] > 0.5) & (jsr_df['mean_jsr_4.0'
 common_prompts = pd.merge(filtered_emh_df, filtered_jsr_df, on='prompt', how='inner')['prompt']
 
 # Display the common prompts
-print("The index for the universla jailbreak prompts are:")
+print("The index for the universal jailbreak prompts are:")
 print(common_prompts)
 
