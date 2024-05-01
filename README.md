@@ -45,6 +45,7 @@ The statistical results of *Token_Calculation.py* will be written into two files
 
 2. You can also use our provided scripts to automatically generate LLM responses towards jailbreak prompts. We provide two scripts for automatic generation on three models, GPT-3.5, GPT-4, and PaLM-2. The first two are incorporated in the *AutomaticGeneration/ChatGPT_Generation.py* script while PaLM-2 is in *AutomaticGeneration/PaLM2_Generation.py*. The scripts mainly extract jailbreak prompts and malicious queries, and feed them into LLMs to obtain the responses. The commands for GPT-3.5, GPT-4, and PaLM-2 are:
 ```sh   
+$ cd AutomaticGeneration
 $ python3 ChatGPT_Generation.py gpt35  
 $ python3 ChatGPT_Generation.py gpt4 
 $ python3 PaLM2_Generation.py
