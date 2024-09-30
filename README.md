@@ -63,7 +63,7 @@ We also measure the jailbreak efficacy on three models individually, which can b
 ```sh 
 $ python3 JSR_EMH_Model.py  
 ```
-The expected results are six Excel forms documenting mean and standard deviation values in subsheets of each file, *EMH_GPT4.xlsx*, *EMH_GPT35*, *EMH_PaLM2.xlsx*, *JSR_GPT4.xlsx, *JSR_GPT35.xlsx*, and *JSR_PaLM2.xlsx*, which are named by the metrics (EMH or JSR) and models (GPT-3.5, GPT-4, or PaLM-2). We also attach the expected results in *EMH_JSR_Model* folder.
+The expected results are six Excel forms documenting mean and standard deviation values in subsheets of each file, *EMH_GPT4.xlsx*, *EMH_GPT35*, *EMH_PaLM2.xlsx*, *JSR_GPT4.xlsx*, *JSR_GPT35.xlsx*, and *JSR_PaLM2.xlsx*, which are named by the metrics (EMH or JSR) and models (GPT-3.5, GPT-4, or PaLM-2). We also attach the expected results in *EMH_JSR_Model* folder.
 
 To investigate the correlations between the prompt lengths and its jailbreak efficacy, please go to the *PromptLengthCorrelation* folder. Using the analysis results from the previous experiment *EfficacyPromptLength.xlsx*, we can run the program with commands:
 ```sh 
